@@ -18,7 +18,12 @@ docker run \
 
 Build
 ```
+# Local build
 docker build --tag william57m/healthcheck .
+
+# Multiplatform build 
+# https://www.docker.com/blog/multi-arch-images/
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t william57m/healthcheck --push .
 ```
 
 Deploy
